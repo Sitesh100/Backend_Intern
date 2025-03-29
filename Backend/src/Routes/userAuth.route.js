@@ -8,7 +8,7 @@ const User = require("../model/user.schema");
 require('dotenv').config();
 
 // SignUp API
-authRouter.post('/signup', async (req, res) => {
+authRouter.post('/registration', async (req, res) => {
     try {
         const { firstName, lastName, email, password, gender } = req.body;
 

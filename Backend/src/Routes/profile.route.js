@@ -19,7 +19,7 @@ profileRouter.get('/profile/view',userAuth, async (req, res) => {
     }
 });
 
-profileRouter.get('/profile/edit',userAuth, async (req, res) => {
+profileRouter.get('/profile/update',userAuth, async (req, res) => {
         try {
             const userId = req.user._id;
             const updateData = req.body;
