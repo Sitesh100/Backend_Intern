@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require("./config/db.config");
 const cookieParser = require("cookie-parser");
 const userAuth = require("./Routes/userAuth.route");
+const userProfile = require("./Routes/profile.route"); 
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(cookieParser());
 
 // api routes
 app.use(userAuth); 
+app.use(userProfile);
 
 // Connect to the database
 connectDB()
